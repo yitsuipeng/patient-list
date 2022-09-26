@@ -60,7 +60,6 @@ class PatientList extends React.Component {
               onClick={this.handleOpenDialog(value)}
             >
               <ListItemText primary={value.Name} />
-
             </ListItem>
           ))}
         </List>
