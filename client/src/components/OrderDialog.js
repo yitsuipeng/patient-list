@@ -52,8 +52,8 @@ export default class OrderDialog extends React.Component {
       this.setState({ helperText: "不可為空" });
     } else {
       await store.dispatch(createOrder(this.state.patient.Id, { message: this.state.message }));
-      await store.dispatch(getPatients());
       await this.handleClose();
+      await store.dispatch(getPatients());
     }
   };
 
