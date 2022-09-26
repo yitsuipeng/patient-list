@@ -1,3 +1,3 @@
-# Jubo assignment
-please find demo at https://patient-list.netlify.app
+# 9/19 assignment
 
+please find demo at https://patient-list.netlify.app
