@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
+import { List, ListItem, ListItemText, CircularProgress}  from "@material-ui/core";
 import store from "../store/index";
 import { OPEN } from "../constants/actionTypes";
 import { getPatients } from "../actions/index";
@@ -61,11 +59,12 @@ class PatientList extends React.Component {
               className={classes.listItem}
               onClick={this.handleOpenDialog(value)}
             >
-              <ListItemText primary={value.Name} secondary={value.Id} />
+              <ListItemText primary={value.Name} />
 
             </ListItem>
           ))}
         </List>
+        {this.state.patients.length === 0 && <CircularProgress />}
       </div>
     );
   }
